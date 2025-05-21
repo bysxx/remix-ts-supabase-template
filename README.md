@@ -1,40 +1,59 @@
-# Welcome to Remix!
+# 🚀 Remix + TypeScript + Supabase Template
 
-- 📖 [Remix docs](https://remix.run/docs)
+A modern web application template built with Remix, TypeScript, and Supabase.
 
-## Development
+## ✨ Key Features
 
-Run the dev server:
+- ⚡️ Fast web application based on Remix framework
+- 🔒 Database management with Supabase
+- 🎨 Modern UI with Tailwind CSS
+- 🔍 SEO
 
-```shellscript
-npm run dev
+## 🛠 Tech Stack
+
+- [Remix](https://remix.run/) - React-based full-stack web framework
+- [TypeScript](https://www.typescriptlang.org/) - Static type support
+- [Supabase](https://supabase.com/) - Open source Firebase alternative
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Vite](https://vitejs.dev/) - Fast development server and build tool
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.0.0 or higher
+- pnpm
+- Supabase account
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone [repository-url]
+cd remix-ts-supabase-template
 ```
 
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
+2. Install dependencies
+```bash
+pnpm install
 ```
 
-Then run the app in production mode:
-
-```sh
-npm start
+3. Set up environment variables
+Create a `.env` file and set the following variables:
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Now you'll need to pick a host to deploy it to.
+### Development Server
 
-### DIY
+```bash
+pnpm run dev
+```
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+### Production Build
 
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+```bash
+pnpm run build
+pnpm start
+```

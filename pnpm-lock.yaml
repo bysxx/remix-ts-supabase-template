@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@remix-run/css-bundle':
-        specifier: ^2.16.7
-        version: 2.16.7
       '@remix-run/node':
         specifier: ^2.16.7
         version: 2.16.7(typescript@5.8.3)
@@ -744,10 +741,6 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
-
-  '@remix-run/css-bundle@2.16.7':
-    resolution: {integrity: sha512-IIZkcHe7vRQVtn4QwmC3KdZhErAD2XCGn/Gam2z1LtNje0H0oAD7AHdsjiiWUd9vTuMCcH2LfgxlEzDYORBzjA==}
-    engines: {node: '>=18.0.0'}
 
   '@remix-run/dev@2.16.7':
     resolution: {integrity: sha512-TOY1g0LXKA2fHZUg/+7UdY/znCv9tnF49xdCP0EYh+X9Iaiz/w2I74CYaUTh9dXesVWEwWpfUn3+GISKtbdyPw==}
@@ -3602,8 +3595,6 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
-
-  '@remix-run/css-bundle@2.16.7': {}
 
   '@remix-run/dev@2.16.7(@remix-run/react@2.16.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@remix-run/serve@2.16.7(typescript@5.8.3))(@types/node@22.15.21)(jiti@1.21.7)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.21)(jiti@1.21.7)(yaml@2.8.0))(yaml@2.8.0)':
     dependencies:
