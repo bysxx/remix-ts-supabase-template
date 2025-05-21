@@ -1,10 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Remix + Supabase Template" },
-    { name: "description", content: "Remix + Supabase" },
-  ];
+  return [{ title: "Remix + Supabase Template" }, { name: "description", content: "Remix + Supabase" }];
 };
 
 export default function Index() {

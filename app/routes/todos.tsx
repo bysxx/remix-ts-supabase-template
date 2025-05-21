@@ -5,10 +5,7 @@ import type { Todo } from "~/types/todo";
 
 export async function loader() {
   try {
-    const { data: todos, error } = await supabase
-      .from("todos")
-      .select("*")
-      .order("created_at", { ascending: false });
+    const { data: todos, error } = await supabase.from("todos").select("*").order("created_at", { ascending: false });
 
     if (error) {
       throw new Error("Failed to fetch todos");
@@ -45,17 +42,10 @@ export async function action({ request }: ActionFunctionArgs) {
   }
 
   if (intent === "toggle") {
-    const { data: todo } = await supabase
-      .from("todos")
-      .select("completed")
-      .eq("id", id)
-      .single();
+    const { data: todo } = await supabase.from("todos").select("completed").eq("id", id).single();
 
     if (todo) {
-      const { error } = await supabase
-        .from("todos")
-        .update({ completed: !todo.completed })
-        .eq("id", id);
+      const { error } = await supabase.from("todos").update({ completed: !todo.completed }).eq("id", id);
 
       if (error) {
         return data({ error: "상태 변경에 실패했습니다" }, { status: 500 });
@@ -104,9 +94,7 @@ export default function Todos() {
               추가
             </button>
           </div>
-          {actionData?.error && (
-            <p className="mt-3 text-red-400 text-sm">{actionData.error}</p>
-          )}
+          {actionData?.error && <p className="mt-3 text-red-400 text-sm">{actionData.error}</p>}
         </Form>
 
         <div className="space-y-4">
@@ -123,18 +111,10 @@ export default function Todos() {
                     type="submit"
                     className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-purple-500 hover:border-purple-400 transition-colors duration-200"
                   >
-                    {todo.completed && (
-                      <div className="w-3 h-3 rounded-full bg-purple-500" />
-                    )}
+                    {todo.completed && <div className="w-3 h-3 rounded-full bg-purple-500" />}
                   </button>
                 </Form>
-                <span
-                  className={`text-lg ${
-                    todo.completed
-                      ? "line-through text-gray-500"
-                      : "text-gray-200"
-                  }`}
-                >
+                <span className={`text-lg ${todo.completed ? "line-through text-gray-500" : "text-gray-200"}`}>
                   {todo.title}
                 </span>
               </div>
@@ -145,12 +125,7 @@ export default function Todos() {
                   type="submit"
                   className="opacity-0 group-hover:opacity-100 text-gray-400 hover:text-red-400 transition-all duration-200"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path
                       fillRule="evenodd"
                       d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"

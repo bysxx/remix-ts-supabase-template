@@ -18,9 +18,7 @@ export function Navbar() {
             <Link
               to="/"
               className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                isActive("/")
-                  ? "bg-purple-500/10 text-purple-400"
-                  : "text-gray-400 hover:text-white"
+                isActive("/") ? "bg-purple-500/10 text-purple-400" : "text-gray-400 hover:text-white"
               }`}
             >
               홈
@@ -28,9 +26,7 @@ export function Navbar() {
             <Link
               to="/todos"
               className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                isActive("/todos")
-                  ? "bg-purple-500/10 text-purple-400"
-                  : "text-gray-400 hover:text-white"
+                isActive("/todos") ? "bg-purple-500/10 text-purple-400" : "text-gray-400 hover:text-white"
               }`}
             >
               할 일 목록
